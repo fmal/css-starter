@@ -5,7 +5,7 @@
   "private": true,
   "author": "filip@fmal.me",
   "dependencies": {
-      
+    "normalize.scss": "^0.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^5.1.1",

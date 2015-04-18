@@ -1,5 +1,5 @@
 @import "web-fonts/_web-fonts";
-//@import "../third-party/_normalize";
+@import "../../../../node_modules/normalize.scss/normalize";
 @import "_reset";
 @import "_page";
 @import "_links";
