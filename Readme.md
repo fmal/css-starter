@@ -1,4 +1,6 @@
 Simple, responsive CSS boilerplate for starting new web projects
 
-- build processes via NPM
+Features:
+
+- build processes (sass compilation, css minification, autoprefixer) via NPM
 - Browsersync live-reloading server
