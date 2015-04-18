@@ -1,0 +1,83 @@
+// Base colors
+// =============================================================================
+$red    : hsla(0,   100%, 50%, 1); // 0
+$orange : hsla(30,  100%, 50%, 1); // 30
+$yellow : hsla(60,  100%, 50%, 1); // 60
+$green  : hsla(120, 100%, 50%, 1); // 120
+$cyan   : hsla(180, 100%, 50%, 1); // 180
+$blue   : hsla(195, 100%, 50%, 1); // 240
+$pink   : hsla(330, 100%, 50%, 1); // 300
+
+$black : hsla(0, 0%, 0%,   1);
+$gray  : hsla(0, 0%, 50%,  1);
+$white : hsla(0, 0%, 100%, 1);
+
+$full   : 100%;
+$faded  : -40%;
+$off    : -70%;
+$slight : -90%;
+
+$hint : 90%;
+
+$defaultTints  : 45% 60% 75%;
+$defaultShades : 25% 50% 75%;
+
+// $color-base: hsla(188, 36%, 47%, 1);
+$color-base: hsl(207, 63%, 14%);
+$color-comp: adjust-hue($color-base, 180);
+
+// Color mappings
+// =============================================================================
+
+// Link palettes
+// ------------------
+$linkColor        : $color-base;
+$linkColor-hover  : darken($linkColor, 10%);
+$linkColor-focus  : $linkColor-hover;
+$linkColor-active : lighten($linkColor, 10%);
+
+// Text-color
+// -------------------------
+$textColor-light  : color(lighter);
+$textColor-medium : $gray;
+$textColor-dark   : color(dark);
+$textColor-darker : color(darker);
+$textColor-quiet  : color(light);
+$textColor-white  : color($hint);
+
+// Background colors
+// -------------------------
+$backgroundColor-lightest : color($white -3%);
+$backgroundColor-lighter  : color(85%);
+$backgroundColor-light    : color(lightest);
+$backgroundColor-medium   : $gray;
+$backgroundColor-dark     : color(dark);
+$backgroundColor-darkest  : color($black 20%);
+
+// Content selection background color
+// -------------------------
+$backgroundColor-selection : color($faded $color-base lightest);
+
+// Alerts
+// -------------------------
+$backgroundColor-info    : color(-20% $blue lightest);
+$textColor-info          : color($blue darkest);
+$backgroundColor-success : color($faded $green lighter);
+$textColor-success       : color($green darkest);
+$backgroundColor-error   : color($faded $red lighter);
+$textColor-error         : color($red darkest);
+$backgroundColor-warning : color(-15% $yellow lightest);
+$textColor-warning       : color($yellow darkest);
+
+// Border colors
+// -------------------------
+$borderColor-base   : color(20%);
+$borderColor-light  : color(lighter);
+$borderColor-medium : $gray;
+$borderColor-dark   : color(dark);
+
+// Button colors
+// -------------------------
+$backgroundColor--buttonBrand   : $color-comp;
+$textColor--buttonBrand         : $textColor-white;
+

@@ -1,0 +1,10 @@
+// Layout and spacing
+// =============================================================================
+$gutterWidth: $lineHeight-base;
+
+$wrapWidth: 1140;
+
+$spacingUnit-base   : $lineHeight-base;
+$spacingUnit-half   : $spacingUnit-base / 2;
+$spacingUnit-medium : $spacingUnit-base * 1.5;
+$spacingUnit-double : $spacingUnit-base * 2;

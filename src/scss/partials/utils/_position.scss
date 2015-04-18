@@ -1,0 +1,124 @@
+/* Positioning utilites
+   ========================================================================== */
+
+.u-posS {
+	position: static !important;
+}
+.u-posA {
+	position: absolute !important;
+}
+.u-posR {
+	position: relative !important;
+}
+
+/**
+ * 1. Make sure fixed elements are promoted into a new layer
+ *    for performance
+ *    (http://benfrain.com/improving-css-performance-fixed-position-elements/)
+ */
+.u-posF {
+	position: fixed !important;
+	backface-visibility: hidden; /* [1] */
+}
+
+.top0 { top: 0 !important; }
+.right0 { right: 0 !important; }
+.bottom0 { bottom: 0 !important; }
+.left0 { left: 0 !important; }
+
+
+/**
+ * Vertical centering
+ */
+.topC {
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+}
+
+/**
+ * Horizontal centering
+ */
+.leftC {
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+}
+
+.z1 { z-index: $zIndex-1 !important; }
+.z2 { z-index: $zIndex-2 !important; }
+.z3 { z-index: $zIndex-3 !important; }
+.z4 { z-index: $zIndex-4 !important; }
+.z9 { z-index: $zIndex-9 !important; }
+
+@include mq($from: small) {
+	.posS--sUp {
+		position: static !important;
+	}
+	.posA--sUp {
+		position: absolute !important;
+	}
+	.posR--sUp {
+		position: relative !important;
+	}
+	.posF--sUp {
+		position: fixed !important;
+		backface-visibility: hidden;
+	}
+
+	.top0--sUp { top: 0 !important; }
+	.right0--sUp { right: 0 !important; }
+	.bottom0--sUp { bottom: 0 !important; }
+	.left0--sUp { left: 0 !important; }
+
+	.topC--sUp {
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+	}
+
+	.leftC--sUp {
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+	}
+
+	.z1--sUp { z-index: $zIndex-1 !important; }
+	.z2--sUp { z-index: $zIndex-2 !important; }
+	.z3--sUp { z-index: $zIndex-3 !important; }
+	.z4--sUp { z-index: $zIndex-4 !important; }
+	.z9--sUp { z-index: $zIndex-9 !important; }
+}
+
+@include mq($from: medium) {
+	.posS--mUp {
+		position: static !important;
+	}
+	.posA--mUp {
+		position: absolute !important;
+	}
+	.posR--mUp {
+		position: relative !important;
+	}
+	.posF--mUp {
+		position: fixed !important;
+		backface-visibility: hidden;
+	}
+	
+	.top0--mUp { top: 0 !important; }
+	.right0--mUp { right: 0 !important; }
+	.bottom0--mUp { bottom: 0 !important; }
+	.left0--mUp { left: 0 !important; }
+	
+	.topC--mUp {
+		top: 50% !important;
+		transform: translateY(-50%) !important;
+	}
+	
+	.leftC--mUp {
+		left: 50% !important;
+		transform: translateX(-50%) !important;
+	}
+	
+	.z1--mUp { z-index: $zIndex-1 !important; }
+	.z2--mUp { z-index: $zIndex-2 !important; }
+	.z3--mUp { z-index: $zIndex-3 !important; }
+	.z4--mUp { z-index: $zIndex-4 !important; }
+	.z9--mUp { z-index: $zIndex-9 !important; }
+}

@@ -1,0 +1,68 @@
+/* Offset utilites
+   ========================================================================== */
+
+@include proportionalUnits(
+	2 3 4,
+	$classSlug: 'u-before',
+	$property: margin-left
+);
+
+@include mq($from: small) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-before',
+		$property: margin-left,
+		$modifier: '--sUp'
+	);
+}
+
+@include mq($from: medium) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-before',
+		$property: margin-left,
+		$modifier: '--mUp'
+	);
+}
+
+@include mq($from: xLarge) {
+	@include proportionalUnits(
+		3,
+		$classSlug: 'u-before',
+		$property: margin-left,
+		$modifier: '--xlUp'
+	);
+}
+
+@include proportionalUnits(
+	2 3 4,
+	$classSlug: 'u-after',
+	$property: margin-right
+);
+
+@include mq($from: small) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-after',
+		$property: margin-right,
+		$modifier: '--sUp'
+	);
+}
+
+@include mq($from: medium) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-after',
+		$property: margin-right,
+		$modifier: '--mUp'
+	);
+}
+
+@include mq($from: xLarge) {
+	@include proportionalUnits(
+		3,
+		$classSlug: 'u-after',
+		$property: margin-right,
+		$modifier: '--xlUp'
+	);
+}

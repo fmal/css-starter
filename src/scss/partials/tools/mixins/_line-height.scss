@@ -1,0 +1,11 @@
+// Line-height mixin
+
+@mixin lineHeight($fontSize, $lineHeight: $lineHeight-base, $isImportant: false) {
+	$importantString: '';
+	
+	@if $isImportant {
+		$importantString: !important;
+	}
+
+	line-height: ceil($fontSize / $lineHeight) * ($lineHeight / $fontSize) #{$importantString};
+}

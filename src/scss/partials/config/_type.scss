@@ -1,0 +1,18 @@
+// Type
+// =============================================================================
+
+// Font sizes
+$fontSize-browserDefault: 16;
+
+$fontSize-base    : $fontSize-browserDefault;
+$lineHeight-base  : $fontSize-base * 1.5; // 24px
+
+$lineHeightRatio  : $lineHeight-base / $fontSize-base;
+$typeRatio: $fourth;
+
+// Font settings
+$fontFamily-body: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+$fontWeight-body: 400;
+
+$fontFamily-headline : 'Nunito', sans-serif;
+$fontWeight-headline : 400;

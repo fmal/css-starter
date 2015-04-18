@@ -1,0 +1,14 @@
+$isOldIE: false !default;
+
+@mixin oldIE {
+	@if $isOldIE {
+		@content;
+	}
+}
+
+@mixin notOldIE {
+	@if not $isOldIE {
+		@content;
+	}
+}
+

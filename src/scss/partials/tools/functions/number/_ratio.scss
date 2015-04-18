@@ -1,0 +1,12 @@
+// Calculate ratio of two values
+
+@function ratio($val, $context, $unit: 1) {
+	// If units are the same, they will cancel out when dividing
+	@if unit($val) == unit($context) {
+		@return ($val / $context) * $unit;
+	}
+	// If mixed units, clean them before dividing
+	@else {
+		@return (clean($val) / clean($context)) * $unit;
+	}
+}

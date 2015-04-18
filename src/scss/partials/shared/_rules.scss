@@ -1,0 +1,24 @@
+h1, .Hdg1,
+h2, .Hdg2,
+h3, .Hdg3 {
+	font-family: $fontFamily-headline;
+    font-weight: $fontWeight-headline;
+	color: $textColor-darker;
+	text-rendering: optimizeLegibility;
+	font-feature-settings: "kern";
+	font-kerning: normal;
+}
+
+h1, h2,
+ul, ol, dl, blockquote, p, pre, table, fieldset, figure, hr {
+	@include rem(margin-bottom, $spacingUnit-base);
+}
+
+ul, ol, dl, p, blockquote,
+figcaption, caption, cite {
+	hyphens: auto;
+}
+
+ul, ol, dd {
+	@include rem(margin-left, $spacingUnit-double);
+}

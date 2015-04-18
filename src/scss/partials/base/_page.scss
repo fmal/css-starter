@@ -1,0 +1,42 @@
+/* Page
+   ========================================================================== */
+
+/**
+ * http://j.mp/rNg5uA
+ */
+html {
+	overflow-y: scroll;
+	background-color: $white;
+	font-family: $fontFamily-body;
+	font-size: _pc($fontSize-base - 2);
+	line-height: $lineHeightRatio;
+	font-weight: $fontWeight-body;
+	color: $textColor-darker;
+	min-width: _em(320);
+
+	@include mq($from: medium) {
+		font-size: _pc($fontSize-base);
+	}
+}
+html,
+body {
+	min-height: 100%;
+}
+
+body {
+	-webkit-backface-visibility: hidden;
+}
+
+@include mqSyncGen($breakpointsSync);
+
+::-moz-selection {
+	background-color: $backgroundColor-selection;
+	text-shadow: none;
+}
+::selection {
+	background-color: $backgroundColor-selection;
+	text-shadow: none;
+}
+
+img::selection { background-color: transparent; }
+img::-moz-selection { background-color: transparent; }

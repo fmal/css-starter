@@ -1,0 +1,19 @@
+.c-base {
+	color: $color-base;
+}
+
+.c-baseLight {
+	color: color($color-base light);
+}
+
+.c-white {
+	color: $white;
+}
+
+.c-textWhite {
+	color: $textColor-white;
+}
+
+.c-textLight {
+	color: $textColor-light;
+}

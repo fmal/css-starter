@@ -1,0 +1,55 @@
+/* Button
+   ========================================================================== */
+  
+.Button {
+	@include lineAndHeight($spacingUnit-double);
+	-webkit-appearance: none;
+	display: inline-block;
+	margin: 0;
+	padding: _em(0 $spacingUnit-base);
+	border: 0;
+	vertical-align: middle;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+	
+	&:active,
+	&:focus {
+		outline: 0;
+	}
+}
+
+.Button--brand {
+	transition: .15s background-color ease-in-out;
+	background-color: $backgroundColor--buttonBrand;
+	border-radius: _em($spacingUnit-base);
+	text-shadow: 0 1px 1px color(darkest, .35);
+	box-shadow: 0 0 0 4px color(darkest, .1);
+	
+	&,
+	&:hover,
+	&:focus,
+	&:active {
+		color: $textColor--buttonBrand;
+	}
+	
+	&:hover,
+	&:focus {
+		background-color: color($backgroundColor--buttonBrand 20%);
+	}
+	
+	&:active {
+		background-color: color($backgroundColor--buttonBrand -2%);
+	}
+}
+
+.Button--large {
+	@include fontSize($fontSize--hdg3);
+}

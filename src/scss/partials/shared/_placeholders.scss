@@ -1,0 +1,23 @@
+/**
+ * Reset default list styling
+ */
+%p-unsetList {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+/**
+ * Automatically justify blocks
+ * http://v.gd/BrGHXk
+ */
+%p-alignJustify {
+	text-align: justify !important;
+	text-justify: distribute-all-lines;
+
+	&:after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+	}
+}

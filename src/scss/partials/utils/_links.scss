@@ -1,0 +1,40 @@
+/* Link utilites
+   ========================================================================== */
+
+/**
+ * A link without any text-decoration at all
+ */
+.linkClean,
+.linkClean:hover,
+.linkClean:focus,
+.linkClean:active {
+	text-decoration: none !important;
+}
+
+/**
+ * Link with several pieces of text and/or icon, where only one piece of text
+ * should display the underline when the link is the subject of user interaction
+ */
+.linkComplex,
+.linkComplex:hover,
+.linkComplex:focus,
+.linkComplex:active {
+ 	text-decoration: none !important;
+}
+
+.linkComplex:hover .linkComplex-target,
+.linkComplex:focus .linkComplex-target,
+.linkComplex:active .linkComplex-target {
+	text-decoration: underline !important;
+}
+
+/**
+ * Block level link
+ */
+.linkBlock,
+.linkBlock:hover,
+.linkBlock:focus,
+.linkBlock:active {
+	display: block !important;
+	text-decoration: none !important;
+}

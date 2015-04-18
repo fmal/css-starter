@@ -1,0 +1,81 @@
+/* Display utilities
+   ========================================================================== */
+   
+.u-dI {
+   	display: inline !important;
+}
+
+.u-dB {
+	display: block !important;
+}
+
+.u-dIB {
+	display: inline-block !important;
+	max-width: 100%;
+}
+
+.u-dT {
+	display: table;
+}
+
+.u-dTR {
+	display: table-row;
+}
+
+.u-dTC {
+	display: table-cell;
+}
+
+@include mq($from: small) {
+	.u-dI--sUp {
+	   	display: inline !important;
+	}
+	
+	.u-dB--sUp {
+		display: block !important;
+	}
+	
+	.u-dIB--sUp {
+		display: inline-block !important;
+		max-width: 100%;
+	}
+	
+	.u-dT--sUp {
+		display: table;
+	}
+	
+	.u-dTR--sUp {
+		display: table-row;
+	}
+	
+	.u-dTC--sUp {
+		display: table-cell;
+	}
+}
+
+@include mq($from: medium) {
+	.u-dI--mUp {
+	   	display: inline !important;
+	}
+
+	.u-dB--mUp {
+		display: block !important;
+	}
+
+	.u-dIB--mUp {
+		display: inline-block !important;
+		max-width: 100%;
+	}
+
+	.u-dT--mUp {
+		display: table;
+	}
+
+	.u-dTR--mUp {
+		display: table-row;
+	}
+
+	.u-dTC--mUp {
+		display: table-cell;
+	}
+}

@@ -1,0 +1,8 @@
+/* Wrap
+   ========================================================================== */
+ 
+.Wrap {
+	@include rem(padding, 0 ($gutterWidth / 2));
+	margin: 0 auto;
+	max-width: _em($wrapWidth);
+}

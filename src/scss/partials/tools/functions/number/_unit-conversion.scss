@@ -1,0 +1,49 @@
+// Convert any number of fixed values to relative
+
+@function unitConvert($vals, $context, $units: 1em) {
+
+	// Create empty list to append converted values to
+	$output: ();
+
+	// Loop through each value, convert, and append to $output list
+	@for $i from 1 through length($vals) {
+		$val: nth($vals, $i);
+		// Only convert values in px
+		@if unit($val) == 'px' or unit($val) == '' {
+			// Convert to specified units
+			$output: append($output, ratio($val, $context, $units), space);
+		}
+		// Otherwise, return the same value
+		@else {
+			$output: append($output, $val, space);
+		}
+	}
+
+	// Return converted values
+	@return $output;
+}
+
+// Percentage alias
+@function _pc( $val, $context: $fontSize-browserDefault) {
+	@return unitConvert($val, $context, 100%);
+}
+
+// Rems alias
+@function _rem($val, $context: $fontSize-base) {
+	@return unitConvert($val, $context, 1rem);
+}
+
+// Ems alias
+@function _em($val, $context: $fontSize-base) {
+	@return unitConvert($val, $context, 1em);
+}
+
+// Set value as px
+@function _px($val) {
+	// Return value if already in pixels
+	@if unit($val) == 'px' {
+		@return $val;
+	}
+	// Otherwise, strip units and convert to px
+	@return clean($val) * 1px;
+}

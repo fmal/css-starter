@@ -1,0 +1,29 @@
+// For adding icons to elements using CSS pseudo-elements
+// Source: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+
+@mixin obj-FontIcon($position: 'before', $styles: true, $icon: false) {
+	@if $styles {
+		// Supportive icon styles have been specified
+		speak: none;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		text-transform: none;
+		line-height: 1;
+		font: {
+			style: normal;
+			variant: normal;
+			weight: normal;
+			family: $fontIconsFamily;
+		}
+	}
+	// Include any extra rules supplied for the pseudo-element
+	@content;
+
+	// Either a :before or :after pseudo-element, defaulting to :before
+	&:#{$position} {
+		@if $icon {
+			// Icon has been specified
+			content: match($fontIcons, $icon);
+		}
+	}
+}

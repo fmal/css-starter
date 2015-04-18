@@ -1,0 +1,9 @@
+// Opacity mixin
+
+@mixin opacity($val) {
+	opacity: $val;
+
+	@include oldIE {
+		filter: unquote("alpha(opacity = #{$val * 100})");
+	}
+}

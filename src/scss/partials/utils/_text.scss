@@ -1,0 +1,188 @@
+/* Text utilities
+   ========================================================================== */
+/**
+ * Text alignment
+ */
+.u-txtL {
+	text-align: left !important;
+}
+.u-txtC {
+	text-align: center !important;
+}
+.u-txtR {
+	text-align: right !important;
+}
+
+@include mq($from: small) {
+	.u-txtL--sUp {
+		text-align: left !important;
+	}
+	.u-txtC--sUp {
+		text-align: center !important;
+	}
+	.u-txtR--sUp {
+		text-align: right !important;
+	}
+}
+
+@include mq($from: medium) {
+	.u-txtL--mUp {
+		text-align: left !important;
+	}
+	.u-txtC--mUp {
+		text-align: center !important;
+	}
+	.u-txtR--mUp {
+		float: none !important;
+	}
+}
+
+@include mq($from: large) {
+	.u-txtL--lUp {
+		text-align: left !important;
+	}
+	.u-txtC--lUp {
+		text-align: center !important;
+	}
+	.u-txtR--lUp {
+		text-align: right !important;
+	}
+}
+
+/**
+ * Inherit the ancestor's text color.
+ */
+.u-txtInheritColor {
+  color: inherit !important;
+}
+
+/**
+ * Uppercase text
+ */
+.u-txtCaps {
+	text-transform: uppercase !important;
+}
+
+/**
+ * Font weights
+ */
+.u-fwT {
+	font-weight: 100 !important;
+}
+.u-fwL {
+	font-weight: 300 !important;
+}
+.u-fwN {
+	font-weight: 400 !important;
+}
+.u-fwSB {
+	font-weight: 600 !important;
+}
+.u-fwB {
+	font-weight: 700 !important;
+}
+
+/**
+ * Control whitespace wrapping
+ */
+.u-wsN {
+	white-space: normal !important;
+}
+.u-wsNW {
+	white-space: nowrap !important;
+}
+
+/**
+ * Control word wrapping
+ */
+.u-wwN {
+	word-wrap: normal !important;
+}
+.u-wwB {
+	word-wrap: break-word !important;
+}
+
+/**
+ * Control word breaking
+ */
+.u-wbN {
+	word-break: normal !important;
+}
+.wbA {
+	word-break: break-all !important;
+}
+
+/**
+ * Control line-height
+ */
+.u-lhI {
+	line-height: inherit !important;
+}
+.u-lh {
+	line-height: 1 !important;
+}
+
+/**
+ * Make an ellipsis in case the string is too long for its container
+ *
+ * Set the width of the `.ellipsis` element to suit your needs
+ */
+.u-txtEllipsis {
+	overflow: hidden !important;
+	max-width: 100%;
+	text-overflow: ellipsis !important;
+	word-wrap: normal !important;
+	white-space: nowrap !important;
+	hyphens: none;
+}
+
+/**
+ * Image replacement (replacing a text element with an image)
+ */
+.u-ir {
+	overflow: hidden;
+	border: 0;
+	background-color: transparent;
+	font: 10px/1 a;
+	*text-indent: -9999px;
+
+	&:before {
+		display: block;
+		width: 0;
+		height: 150%;
+		content: "";
+	}
+}
+
+/**
+ *
+ * 1. Old IE fix
+ */
+.txtAssistive {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* [1] */
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+/**
+ * Hanging punctuation
+ *
+ * <p class="u-hangingPunctuation">
+ *     <span class="u-hangingPunctuation-start">&#8220;</span> text...
+ * </p>
+ *
+ * <p class="u-hangingPunctuation u-textRight">
+ *     text... <span class="u-hangingPunctuation-end">&#8221;</span>
+ * </p>
+ */
+.u-hangingPunctuation {
+	position: relative;
+}
+.u-hangingPunctuation-start {
+	position: absolute;
+	right: 100%;
+}
+.u-hangingPunctuation-end {
+	position: absolute;
+	left: 100%;
+}

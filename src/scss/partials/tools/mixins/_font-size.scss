@@ -1,0 +1,6 @@
+// Font-size mixin
+
+@mixin fontSize($fontSize: $fontSize-base) {
+	font-size: _px($fontSize);
+	font-size: _rem($fontSize);
+}

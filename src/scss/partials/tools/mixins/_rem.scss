@@ -1,0 +1,28 @@
+// Mixin for returning pixel and rem values
+
+@mixin rem($property, $values, $isImportant: false) {
+	$pxValues: ();
+	$remValues: ();
+
+	$importantString: '';
+	
+	@if $isImportant {
+		$importantString: !important;
+	}
+
+	@each $value in $values {
+		@if $value == 0 {
+			$pxValues: append($pxValues, $value);
+			$remValues: append($remValues, $value);
+		} @else {
+			$pxValues: append($pxValues, _px($value));
+			$remValues: append($remValues, _rem($value));
+		}
+	}
+
+	#{$property}: #{$pxValues} #{$importantString};
+
+	@if not $isOldIE {
+		#{$property}: #{$remValues} #{$importantString};
+	}
+}

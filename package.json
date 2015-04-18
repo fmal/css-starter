@@ -1,0 +1,38 @@
+{
+  "name": "css-starter",
+  "description": "CSS boilerplate for starting new web projects",
+  "version": "0.0.1",
+  "private": true,
+  "author": "filip@fmal.me",
+  "dependencies": {
+      
+  },
+  "devDependencies": {
+    "autoprefixer": "^5.1.1",
+    "browser-sync": "^2.6.4",
+    "clean-css": "^3.1.9",
+    "lodash": "^3.7.0",
+    "parallelshell": "^1.1.1",
+    "rimraf": "^2.3.2",
+    "scss-cli": "0.0.5",
+    "watch": "^0.16.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist/*",
+    "html:build": "node src/html/build",
+    "html:watch": "watch 'npm run html:build' ./src/html",
+    "css:build": "scss-cli --source-map --output-style expanded --precision 7 './src/scss/**/*.scss' --glob -o dist/css",
+    "css:post": "autoprefixer -b 'last 2 versions' < dist/css/main.css | cleancss --source-map --skip-import -o dist/css/main.min.css",
+    "css:postIe": "autoprefixer -b 'last 2 versions, ie 8' < dist/css/main-ie.css | cleancss --source-map --skip-import --compatibility 'ie8' -o dist/css/main-ie.min.css",
+    "postcss:build": "npm run css:post -s && npm run css:postIe -s",
+    "css:watch": "watch 'npm run css:build' ./src/scss",
+    "prebuild": "npm run clean -s",
+    "build": "npm run html:build -s && npm run css:build -s",
+    "test": "echo 'Error: no test specified' && exit 1",
+    "browserSync": "browser-sync start --port 8000 --server 'dist' --files 'dist/**/*' --logLevel 'info' --no-notify",
+    "watch": "parallelshell 'npm run css:watch -s' 'npm run html:watch -s' 'npm run browserSync'",
+    "prewatch": "npm run build",
+    "start": "npm run watch",
+    "prestart": "npm install"
+  }
+}

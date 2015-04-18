@@ -1,0 +1,55 @@
+/* Media component
+   ========================================================================== */
+
+.Media {
+	@extend .u-cf;
+	display: block;
+}
+
+	.Media-img {
+		float: left;
+		margin-right: _em($spacingUnit-base);
+	}
+
+	/**
+	 * Reversed image location (right instead of left)
+	 */
+	.Media-img--rev {
+		float: right;
+		margin-left: _em($spacingUnit-base);
+	}
+
+		.Media-img img,
+		.Media-img--rev img {
+			display: block;
+		}
+
+	.Media-body {
+		@extend .u-bfcAlt;
+		vertical-align: top;
+
+		&,
+		> :last-child {
+			margin-bottom: 0;
+		}
+	}
+
+/**
+ * Responsive media object
+ */
+@include mq($until: medium) {
+	.Media--responsive {
+		> .Media-img,
+		> .Media-img--rev {
+			@include rem(margin-bottom, $spacingUnit-base);
+			float: none;
+			display: block;
+
+			&,
+			img {
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+}

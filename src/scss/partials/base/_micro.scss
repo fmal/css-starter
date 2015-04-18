@@ -1,0 +1,11 @@
+/* Micro typographic styles
+   ========================================================================== */
+
+small {
+	@include fontSize(_ms(-1));
+	line-height: 0;
+}
+
+s {
+	text-decoration: line-through;
+}

@@ -1,0 +1,26 @@
+/* Font icons
+   ========================================================================== */
+
+$useFontIcons: true !default;
+
+$fontIcons: () !default;
+
+@import "_functions";
+@import "_mixins";
+
+@if $useFontIcons == true {
+	.FontIcon {
+		//@include icon;
+		@include obj-FontIcon {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	
+	@each $icon in $fontIcons {
+		$name: nth($icon, 1);
+		.FontIcon--#{$name} {
+			@include obj-FontIcon('before', false, $name);
+		}
+	}
+}

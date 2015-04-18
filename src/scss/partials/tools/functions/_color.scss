@@ -1,0 +1,170 @@
+// Color functions (from https://github.com/ericam/accoutrement)
+// =============================================================================
+
+// Set the default mixing intervals for use in color stacks.
+$defaultAmounts : 20% 40% 60% 70% 80% !default;
+$defaultTints   : $defaultAmounts !default;
+$defaultShades  : $defaultAmounts !default;
+
+// Add percentage of white to a color
+@function tint($color, $percent) {
+	@return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent) {
+	@return mix(black, $color, $percent);
+}
+
+// Returns a list of mixed colors at given intervals
+// based on two initial source colors.
+//
+// colorStack($main, $second [, $amounts])
+// - $main    : The main color this stack is based on.
+// - $second  : The color to be mixed in at varrying amounts.
+// - $amounts : Optional list of percentage mix intervals.
+@function colorStack($main, $second, $amounts: $defaultAmounts) {
+	$stack: $main;
+
+	@each $amount in $amounts {
+		$stack: join($stack, mix($second, $main, $amount));
+	}
+
+	@return $stack;
+}
+
+@function tintStack($color, $amounts: $defaultTints) {
+	@return colorStack($color, #fff, $amounts);
+}
+@function shadeStack($color, $amounts: $defaultShades) {
+	@return colorStack($color, #000, $amounts);
+}
+
+// Managing Colors
+
+// Returns a given tint or shade of a color,
+// with options for changing saturation and alpha channels as well.
+//
+// color($color [, $alpha, $tints, $shades])
+// - $color   : The color to work from (See "Parsing Colors" detail below)
+// - $tints   : Optional list of percentage tint amounts.
+// - $shades  : Optional list of percentage shade amounts.
+//
+// Parsing Colors: $color == $saturation $color $tint-shade
+// - Any color value will be used as the base color.
+// - Any percentage preceeding the color will scale saturation.
+// - Any intiger, percentage, or keyword will change tint/shade:
+//   - Intigers step through your list of tint/shade amounts.
+//   - Percentages are used directly as tint/shade amounts.
+//   - Positive numbers tint, negative numbers scale.
+//   - Keywords light/lighter/lightest & dark/darker/darkest
+//     use the first, middle, and last amounts in a stack.
+@function color(
+	$color,
+	$alpha: 1,
+	$tints: $defaultTints,
+	$shades: $defaultShades
+) {
+	$saturation: false;
+	$lightness: false;
+	$hue: hsl(0, 0%, 50%);
+	$hasHue: false;
+	$index: 0;
+
+	@each $arg in $color {
+		@if type-of($arg) == 'color' {
+			$hue: $arg;
+			$hasHue: true;
+		}
+		@if type-of($arg) == 'number' {
+			@if unit($arg) != '' {
+				@if $hasHue or length($color) == 1 { $lightness: $arg; }
+				@else{ $saturation: $arg; }
+			}
+			@else { $index: $arg; }
+		}
+		@if type-of($arg) == 'string' {
+			$tintLength  : length($tints);
+			$tintHalf    : floor($tintLength / 2);
+			$shadeLength : length($shades);
+			$shadeHalf   : floor($shadeLength / 2);
+			@if $arg == 'light' { $index: 1; }
+			@if $arg == 'lighter' { $index: if($tintHalf < 2, 2, $tintHalf); }
+			@if $arg == 'lightest' { $index: $tintLength; }
+			@if $arg == 'dark' { $index: -1; }
+			@if $arg == 'darker' { $index: if($shadeHalf < 2, -2, - $shadeHalf); }
+			@if $arg == 'darkest' { $index: - $shadeLength; }
+		}
+	}
+
+	@if $lightness and $lightness != 0 {
+		@if $lightness > 0 { $hue: tint($hue, $lightness); }
+		@else { $hue: shade($hue, abs($lightness)); }
+	} @else if $index and $index != 0 {
+		$colorStack: compact();
+		@if $index > 0 {
+			$index: $index + 1;
+			$colorStack: tintStack($hue, $tints);
+		} @else {
+			$index: abs($index) + 1;
+			$colorStack: shadeStack($hue, $shades);
+		}
+		@if $index <= length($colorStack) {
+			$hue: nth($colorStack, $index);
+		} @else {
+			@warn "You don't have #{$index - 1} colors in this stack";
+		}
+	}
+
+	@if $saturation { $hue: scale-color($hue, $saturation: $saturation); }
+	@return rgba($hue, $alpha);
+}
+
+// Convert any color format to plain RGB
+@function getRgb($color) {
+	@return rgb(red($color), green($color), blue($color));
+}
+
+// Mix translucent color with background to make a flat color for IE
+// Reference: https://github.com/rhysburnie/skeleton-compass/blob/master/stylesheets/bones/utilities/_color.scss
+@function colorFlatten($color, $bgColor: white) {
+	// Get opacity of color, convert to percentage
+	$weight: percentage(alpha($color));
+	// Mix new flat color
+	@return mix(getRgb($color), $bgColor, $weight);
+}
+
+// Set old IE flag if not already defined
+$isOldIE: false !default;
+
+// Convert any color format to RGBA, with fallback for old IE and optional background color to mix
+// Usage: colorAlpha( #abc, 0.5) ) => rgba(170, 187, 204, 0.5) or #d4dde5 for old IE
+@function colorAlpha($color, $opacity: none, $bgColor: white, $flat: false) {
+
+	// Check the arguments passed
+	// If color already has alpha value (e.g. rgba, hlsa)
+	@if alpha($color) < 1 {
+		// Then check if a second argument was passed
+		@if $opacity == 'none' {
+			// If no second argument, set the opacity as the alpha value
+			$opacity: alpha($color);
+		}
+		// If second argument is a color
+		@else if type-of($opacity) == 'color' {
+			// Set the bg-color
+			$bgColor: $opacity;
+			// Set the opacity
+			$opacity: alpha($color);
+		}
+	}
+
+	// Output flat color for IE
+	@if $flat or $isOldIE {
+		// Return flattened color
+		@return colorFlatten(rgba($color, $opacity), $bgColor);
+	}
+	// Otherwise, return RGBA
+	@else {
+		@return rgba($color, $opacity);
+	}
+}

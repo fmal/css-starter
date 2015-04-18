@@ -1,0 +1,60 @@
+/* ==========================================================================
+   Globaly applicable state rules
+   ========================================================================== */
+
+.is-actionable {
+	display: pointer !important;
+}
+
+.is-disabled {
+	@include opacity(.5);
+	cursor: default !important;
+}
+
+/**
+ * Hide/show elements
+ */
+.is-hidden {
+	display: none !important;
+	visibility: hidden !important;
+}
+.is-visible {
+	display: block !important;
+	visibility: visible !important;
+}
+
+table.is-shown {
+	display: table !important;
+}
+
+.is-hiddenVisually {
+	position: absolute !important;
+	overflow: hidden !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	border: 0 !important;
+	padding: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+.is-visibleLarge {
+	@include mq($until: large) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+.is-hiddenLarge {
+	@include mq($from: large) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}
+
+.is-visibleSmall {
+	@include mq($from: small) {
+		display: none !important;
+		visibility: hidden !important;
+	}
+}

@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+// Setup
+@import "partials/tools/__functions";
+@import "partials/config/__config";
+@import "partials/tools/__mixins";
+
+@import "partials/base/__base";
+@import "partials/shared/__shared";
+@import "partials/utils/__utils";
+@import "partials/objects/__objects";
+//@import "partials/ui/__ui";
+@import "partials/fx/__fx";

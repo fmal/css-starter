@@ -1,0 +1,32 @@
+/* Notification
+   ========================================================================== */
+
+.Notification {
+	position: relative;
+	padding: _em($spacingUnit-half $spacingUnit-base);
+	border-radius: _em($spacingUnit-half / 2);
+}
+
+.Notification--success {
+	background-color: $backgroundColor-success;
+	box-shadow: inset 0 0 0 1px color($backgroundColor-success dark);
+	color: $textColor-success;
+}
+
+.Notification--error {
+	background-color: $backgroundColor-error;
+	box-shadow: inset 0 0 0 1px color($backgroundColor-error dark);
+	color: $textColor-error;
+}
+
+.Notification--info {
+	background-color: $backgroundColor-info;
+	box-shadow: inset 0 0 0 1px color($backgroundColor-info dark);
+	color: $textColor-info;
+}
+
+.Notification--warning {
+	background-color: $backgroundColor-warning;
+	box-shadow: inset 0 0 0 1px color($backgroundColor-warning dark);
+	color: $textColor-warning;
+}

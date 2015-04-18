@@ -1,0 +1,21 @@
+/* Blockquotes
+   ========================================================================== */
+   
+blockquote {
+	font-style: italic;
+	
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+	
+	> b,
+	> cite {
+		display: block;
+		font-style: normal;
+		
+		&:before {
+			content: "\2014";
+			margin-right: _em($spacingUnit-half / 2);
+		}
+	}
+}

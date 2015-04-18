@@ -1,0 +1,110 @@
+// Media queries mixins (based on https://github.com/guardian/sass-mq)
+// =============================================================================
+
+$isOldIE: false !default;
+
+$staticBreakpoint: large !default;
+
+// Brakpoints for JS ingestion
+// Add the breakpoints to this, ordered by width, e.g. (mobile, tablet, desktop)
+$breakpointsSync: () !default;
+
+@function getBreakpointWidth($name) {
+	@if map-has-key($breakpoints, $name) {
+		@return map-get($breakpoints, $name);
+	} @else {
+		@warn "Breakpoint #{$name} does not exist";
+	}
+}
+
+@function px2em($px, $fontSize: 16px) {
+	@if (unitless($px)) {
+		@warn "Assuming #{$px} to be in pixels, attempting to convert it into pixels for you";
+		@return px2em($px + 0px);
+	} @else if (unit($px) == em) {
+		@return $px;
+	}
+	@return ($px / $fontSize) * 1em;
+}
+
+@mixin mq($from: false, $until: false, $and: false) {
+	// Initialize variables
+	$minWidth: 0;
+	$maxWidth: 0;
+	$mediaQuery: '';
+
+	// From: this breakpoint (inclusive)
+	@if $from {
+		@if type-of($from) == number {
+			$minWidth: px2em($from);
+		} @else {
+			$minWidth: px2em(getBreakpointWidth($from));
+		}
+	}
+
+	// Until: that breakpoint (exclusive)
+	@if $until {
+		@if type-of($until) == number {
+			$maxWidth: px2em($until);
+		} @else {
+			$maxWidth: px2em(getBreakpointWidth($until)) - .01em;
+		}
+	}
+
+	// Responsive support is disabled, rasterize the output outside @media blocks
+	// The browser will rely on the cascade itself.
+	@if ($isOldIE == true) {
+		$staticBreakpointWidth: getBreakpointWidth($staticBreakpoint);
+		@if type-of($staticBreakpointWidth) == number {
+			$targetWidth: px2em($staticBreakpointWidth);
+			// Output only rules that start at or span our target width
+			@if ($and == false and ($minWidth <= $targetWidth) and (($until == false) or ($maxWidth >= $targetWidth))) {
+				@content;
+			}
+		} @else {
+			// Throw a warning if $staticBreakpoint is not in the $breakpoints list
+			@warn "No static styles will be output: #{$staticBreakpointWidth}";
+		}
+	}
+
+	// Responsive support is enabled, output rules inside @media queries
+	@else {
+		@if $minWidth != 0 {
+			$mediaQuery: '#{$mediaQuery} and (min-width: #{$minWidth})';
+		}
+		@if $maxWidth != 0 {
+			$mediaQuery: '#{$mediaQuery} and (max-width: #{$maxWidth})';
+		}
+		@if $and {
+			$mediaQuery: '#{$mediaQuery} and #{$and}';
+		}
+
+		$mediaQuery: 'all' + unquote(#{$mediaQuery});
+		
+		@media #{$mediaQuery} {
+			@content;
+		}
+	}
+}
+
+// Build breakpoints for JS ingestion
+@mixin mqSyncGen($breakpointsSync) {
+	$breakpointNames: ();
+
+	@each $breakpoint in $breakpointsSync {
+		$breakpointNames: append($breakpointNames, unquote($breakpoint), comma);
+		
+		@include mq($breakpoint) {
+			head {
+				font-family: "#{$breakpoint}";
+			}
+		}
+	}
+	
+	head {
+		clear: both;
+		
+		// store hash of all breakpoints
+		title { font-family: "#{$breakpointNames}"; }
+	}
+}

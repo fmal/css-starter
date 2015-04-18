@@ -1,0 +1,53 @@
+/* Dimension utilities
+   ========================================================================== */
+
+/**
+ * Make an element the width of its parent
+ */
+.u-sizeFull {
+	box-sizing: border-box !important;
+	display: block !important;
+	width: 100% !important;
+}
+
+.u-sizeAuto {
+	width: auto !important;
+}
+
+@include mq($from: small) {
+	.u-sizeAuto--sUp {
+		width: auto !important;
+	}
+}
+
+/**
+ * Proportional widths
+ */
+@include proportionalUnits(
+	2 3 4,
+	$classSlug: 'u-size'
+);
+
+@include mq($from: small) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-size',
+		$modifier: '--sUp'
+	);
+}
+
+@include mq($from: medium) {
+	@include proportionalUnits(
+		2 3 4 6,
+		$classSlug: 'u-size',
+		$modifier: '--mUp'
+	);
+}
+
+@include mq($from: xLarge) {
+	@include proportionalUnits(
+		3,
+		$classSlug: 'u-size',
+		$modifier: '--xlUp'
+	);
+}

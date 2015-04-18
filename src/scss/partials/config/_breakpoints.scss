@@ -1,0 +1,17 @@
+// Breakpoints
+// =============================================================================
+
+$breakpoints: (
+	small:   500px,
+	medium:  780px,
+	large:   1020px,
+	xLarge:  1400px
+);
+
+// Breakpoints for JS ingestion
+$breakpointsSync: (
+	small,
+	medium,
+	large,
+	xLarge
+);
