@@ -2,7 +2,7 @@
    ========================================================================== */
    
 .u-dI {
-   	display: inline !important;
+	display: inline !important;
 }
 
 .u-dB {
@@ -27,55 +27,55 @@
 }
 
 @include mq($from: small) {
-	.u-dI--sUp {
-	   	display: inline !important;
+	.u-dI\@sUp {
+		display: inline !important;
 	}
 	
-	.u-dB--sUp {
+	.u-dB\@sUp {
 		display: block !important;
 	}
 	
-	.u-dIB--sUp {
+	.u-dIB\@sUp {
 		display: inline-block !important;
 		max-width: 100%;
 	}
 	
-	.u-dT--sUp {
+	.u-dT\@sUp {
 		display: table;
 	}
 	
-	.u-dTR--sUp {
+	.u-dTR\@sUp {
 		display: table-row;
 	}
 	
-	.u-dTC--sUp {
+	.u-dTC\@sUp {
 		display: table-cell;
 	}
 }
 
 @include mq($from: medium) {
-	.u-dI--mUp {
-	   	display: inline !important;
+	.u-dI\@mUp {
+		display: inline !important;
 	}
 
-	.u-dB--mUp {
+	.u-dB\@mUp {
 		display: block !important;
 	}
 
-	.u-dIB--mUp {
+	.u-dIB\@mUp {
 		display: inline-block !important;
 		max-width: 100%;
 	}
 
-	.u-dT--mUp {
+	.u-dT\@mUp {
 		display: table;
 	}
 
-	.u-dTR--mUp {
+	.u-dTR\@mUp {
 		display: table-row;
 	}
 
-	.u-dTC--mUp {
+	.u-dTC\@mUp {
 		display: table-cell;
 	}
 }

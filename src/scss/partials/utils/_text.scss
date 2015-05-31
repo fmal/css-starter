@@ -14,37 +14,37 @@
 }
 
 @include mq($from: small) {
-	.u-txtL--sUp {
+	.u-txtL\@sUp {
 		text-align: left !important;
 	}
-	.u-txtC--sUp {
+	.u-txtC\@sUp {
 		text-align: center !important;
 	}
-	.u-txtR--sUp {
+	.u-txtR\@sUp {
 		text-align: right !important;
 	}
 }
 
 @include mq($from: medium) {
-	.u-txtL--mUp {
+	.u-txtL\@mUp {
 		text-align: left !important;
 	}
-	.u-txtC--mUp {
+	.u-txtC\@mUp {
 		text-align: center !important;
 	}
-	.u-txtR--mUp {
+	.u-txtR\@mUp {
 		float: none !important;
 	}
 }
 
 @include mq($from: large) {
-	.u-txtL--lUp {
+	.u-txtL\@lUp {
 		text-align: left !important;
 	}
-	.u-txtC--lUp {
+	.u-txtC\@lUp {
 		text-align: center !important;
 	}
-	.u-txtR--lUp {
+	.u-txtR\@lUp {
 		text-align: right !important;
 	}
 }
@@ -53,7 +53,7 @@
  * Inherit the ancestor's text color.
  */
 .u-txtInheritColor {
-  color: inherit !important;
+	color: inherit !important;
 }
 
 /**

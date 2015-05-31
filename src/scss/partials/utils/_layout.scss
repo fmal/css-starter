@@ -15,37 +15,37 @@
 }
 
 @include mq($from: small) {
-	.u-fR--sUp {
+	.u-fR\@sUp {
 		float: right !important;
 	}
-	.u-fL--sUp {
+	.u-fL\@sUp {
 		float: left !important;
 	}
-	.u-fN--sUp {
+	.u-fN\@sUp {
 		float: none !important;
 	}
 }
 
 @include mq($from: medium) {
-	.u-fR--mUp {
+	.u-fR\@mUp {
 		float: right !important;
 	}
-	.u-fL--mUp {
+	.u-fL\@mUp {
 		float: left !important;
 	}
-	.u-fN--mUp {
+	.u-fN\@mUp {
 		float: none !important;
 	}
 }
 
 @include mq($from: large) {
-	.u-fR--lUp {
+	.u-fR\@lUp {
 		float: right !important;
 	}
-	.u-fL--lUp {
+	.u-fL\@lUp {
 		float: left !important;
 	}
-	.u-fN--lUp {
+	.u-fN\@lUp {
 		float: none !important;
 	}
 }
@@ -73,8 +73,8 @@
 	}
 	
 	@include oldIE {
-    		*zoom: 1;
-    }
+	   *zoom: 1;
+	}
 }
 
 /**

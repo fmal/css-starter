@@ -12,7 +12,7 @@
 		2 3 4 6,
 		$classSlug: 'u-before',
 		$property: margin-left,
-		$modifier: '--sUp'
+		$modifier: '\@sUp'
 	);
 }
 
@@ -21,7 +21,7 @@
 		2 3 4 6,
 		$classSlug: 'u-before',
 		$property: margin-left,
-		$modifier: '--mUp'
+		$modifier: '\@mUp'
 	);
 }
 
@@ -30,7 +30,7 @@
 		3,
 		$classSlug: 'u-before',
 		$property: margin-left,
-		$modifier: '--xlUp'
+		$modifier: '\@xlUp'
 	);
 }
 
@@ -45,7 +45,7 @@
 		2 3 4 6,
 		$classSlug: 'u-after',
 		$property: margin-right,
-		$modifier: '--sUp'
+		$modifier: '\@sUp'
 	);
 }
 
@@ -54,7 +54,7 @@
 		2 3 4 6,
 		$classSlug: 'u-after',
 		$property: margin-right,
-		$modifier: '--mUp'
+		$modifier: '\@mUp'
 	);
 }
 
@@ -63,6 +63,6 @@
 		3,
 		$classSlug: 'u-after',
 		$property: margin-right,
-		$modifier: '--xlUp'
+		$modifier: '\@xlUp'
 	);
 }

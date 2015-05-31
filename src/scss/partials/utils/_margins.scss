@@ -121,207 +121,207 @@
 }
 
 @include mq($from: small) {
-	.u-m0--sUp {
+	.u-m0\@sUp {
 		margin: 0 !important;
 	}
-	.u-m1--sUp {
+	.u-m1\@sUp {
 		@include rem(margin, $spacingUnit-half, true);
 	}
-	.u-m2--sUp {
+	.u-m2\@sUp {
 		@include rem(margin, $spacingUnit-base, true);
 	}
-	.u-m3--sUp {
+	.u-m3\@sUp {
 		@include rem(margin, $spacingUnit-medium, true);
 	}
-	.u-m4--sUp {
+	.u-m4\@sUp {
 		@include rem(margin, $spacingUnit-double, true);
 	}
 	
-	.u-mxa--sUp {
+	.u-mxa\@sUp {
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
-	.u-mxn1--sUp {
+	.u-mxn1\@sUp {
 		@include rem(margin-left, -$spacingUnit-half, true);
 		@include rem(margin-right, -$spacingUnit-half, true);
 	}
-	.u-mxn2--sUp {
+	.u-mxn2\@sUp {
 		@include rem(margin-left, -$spacingUnit-base, true);
 		@include rem(margin-right, -$spacingUnit-base, true);
 	}
-	.u-mxn3--sUp {
+	.u-mxn3\@sUp {
 		@include rem(margin-left, -$spacingUnit-medium, true);
 		@include rem(margin-right, -$spacingUnit-medium, true);
 	}
-	.u-mxn4--sUp {
+	.u-mxn4\@sUp {
 		@include rem(margin-left, -$spacingUnit-double, true);
 		@include rem(margin-right, -$spacingUnit-double, true);
 	}
 	
-	.u-mt0--sUp {
+	.u-mt0\@sUp {
 		margin-top: 0 !important;
 	}
-	.u-mt1--sUp {
+	.u-mt1\@sUp {
 		@include rem(margin-top, $spacingUnit-half, true);
 	}
-	.u-mt2--sUp {
+	.u-mt2\@sUp {
 		@include rem(margin-top, $spacingUnit-base, true);
 	}
-	.u-mt3--sUp {
+	.u-mt3\@sUp {
 		@include rem(margin-top, $spacingUnit-medium, true);
 	}
-	.u-mt4--sUp {
+	.u-mt4\@sUp {
 		@include rem(margin-top, $spacingUnit-double, true);
 	}
 
-	.u-mb0--sUp {
+	.u-mb0\@sUp {
 		margin-bottom: 0 !important;
 	}
-	.u-mb1--sUp {
+	.u-mb1\@sUp {
 		@include rem(margin-bottom, $spacingUnit-half, true);
 	}
-	.u-mb2--sUp {
+	.u-mb2\@sUp {
 		@include rem(margin-bottom, $spacingUnit-base, true);
 	}
-	.u-mb3--sUp {
+	.u-mb3\@sUp {
 		@include rem(margin-bottom, $spacingUnit-medium, true);
 	}
-	.u-mb4--sUp {
+	.u-mb4\@sUp {
 		@include rem(margin-bottom, $spacingUnit-double, true);
 	}
 
-	.u-ml0--sUp {
+	.u-ml0\@sUp {
 		margin-left: 0 !important;
 	}
-	.u-ml1--sUp {
+	.u-ml1\@sUp {
 		@include rem(margin-left, $spacingUnit-half, true);
 	}
-	.u-ml2--sUp {
+	.u-ml2\@sUp {
 		@include rem(margin-left, $spacingUnit-base, true);
 	}
-	.u-ml3--sUp {
+	.u-ml3\@sUp {
 		@include rem(margin-left, $spacingUnit-medium, true);
 	}
-	.u-ml4--sUp {
+	.u-ml4\@sUp {
 		@include rem(margin-left, $spacingUnit-double, true);
 	}
 
-	.u-mr0--sUp {
+	.u-mr0\@sUp {
 		margin-right: 0 !important;
 	}
-	.u-mr1--sUp {
+	.u-mr1\@sUp {
 		@include rem(margin-right, $spacingUnit-half, true);
 	}
-	.u-mr2--sUp {
+	.u-mr2\@sUp {
 		@include rem(margin-right, $spacingUnit-base, true);
 	}
-	.u-mr3--sUp {
+	.u-mr3\@sUp {
 		@include rem(margin-right, $spacingUnit-medium, true);
 	}
-	.u-mr4--sUp {
+	.u-mr4\@sUp {
 		@include rem(margin-right, $spacingUnit-double, true);
 	}
 }
 
 @include mq($from: medium) {
-	.u-m0--mUp {
+	.u-m0\@mUp {
 		margin: 0 !important;
 	}
-	.u-m1--mUp {
+	.u-m1\@mUp {
 		@include rem(margin, $spacingUnit-half, true);
 	}
-	.u-m2--mUp {
+	.u-m2\@mUp {
 		@include rem(margin, $spacingUnit-base, true);
 	}
-	.u-m3--mUp {
+	.u-m3\@mUp {
 		@include rem(margin, $spacingUnit-medium, true);
 	}
-	.u-m4--mUp {
+	.u-m4\@mUp {
 		@include rem(margin, $spacingUnit-double, true);
 	}
 	
-	.u-mxa--mUp {
+	.u-mxa\@mUp {
 		margin-left: auto !important;
 		margin-right: auto !important;
 	}
-	.u-mxn1--mUp {
+	.u-mxn1\@mUp {
 		@include rem(margin-left, -$spacingUnit-half, true);
 		@include rem(margin-right, -$spacingUnit-half, true);
 	}
-	.u-mxn2--mUp {
+	.u-mxn2\@mUp {
 		@include rem(margin-left, -$spacingUnit-base, true);
 		@include rem(margin-right, -$spacingUnit-base, true);
 	}
-	.u-mxn3--mUp {
+	.u-mxn3\@mUp {
 		@include rem(margin-left, -$spacingUnit-medium, true);
 		@include rem(margin-right, -$spacingUnit-medium, true);
 	}
-	.u-mxn4--mUp {
+	.u-mxn4\@mUp {
 		@include rem(margin-left, -$spacingUnit-double, true);
 		@include rem(margin-right, -$spacingUnit-double, true);
 	}
 	
-	.u-mt0--mUp {
+	.u-mt0\@mUp {
 		margin-top: 0 !important;
 	}
-	.u-mt1--mUp {
+	.u-mt1\@mUp {
 		@include rem(margin-top, $spacingUnit-half, true);
 	}
-	.u-mt2--mUp {
+	.u-mt2\@mUp {
 		@include rem(margin-top, $spacingUnit-base, true);
 	}
-	.u-mt3--mUp {
+	.u-mt3\@mUp {
 		@include rem(margin-top, $spacingUnit-medium, true);
 	}
-	.u-mt4--mUp {
+	.u-mt4\@mUp {
 		@include rem(margin-top, $spacingUnit-double, true);
 	}
 	
-	.u-mb0--mUp {
+	.u-mb0\@mUp {
 		margin-bottom: 0 !important;
 	}
-	.u-mb1--mUp {
+	.u-mb1\@mUp {
 		@include rem(margin-bottom, $spacingUnit-half, true);
 	}
-	.u-mb2--mUp {
+	.u-mb2\@mUp {
 		@include rem(margin-bottom, $spacingUnit-base, true);
 	}
-	.u-mb3--mUp {
+	.u-mb3\@mUp {
 		@include rem(margin-bottom, $spacingUnit-medium, true);
 	}
-	.u-mb4--mUp {
+	.u-mb4\@mUp {
 		@include rem(margin-bottom, $spacingUnit-double, true);
 	}
 	
-	.u-ml0--mUp {
+	.u-ml0\@mUp {
 		margin-left: 0 !important;
 	}
-	.u-ml1--mUp {
+	.u-ml1\@mUp {
 		@include rem(margin-left, $spacingUnit-half, true);
 	}
-	.u-ml2--mUp {
+	.u-ml2\@mUp {
 		@include rem(margin-left, $spacingUnit-base, true);
 	}
-	.u-ml3--mUp {
+	.u-ml3\@mUp {
 		@include rem(margin-left, $spacingUnit-medium, true);
 	}
-	.u-ml4--mUp {
+	.u-ml4\@mUp {
 		@include rem(margin-left, $spacingUnit-double, true);
 	}
 	
-	.u-mr0--mUp {
+	.u-mr0\@mUp {
 		margin-right: 0 !important;
 	}
-	.u-mr1--mUp {
+	.u-mr1\@mUp {
 		@include rem(margin-right, $spacingUnit-half, true);
 	}
-	.u-mr2--mUp {
+	.u-mr2\@mUp {
 		@include rem(margin-right, $spacingUnit-base, true);
 	}
-	.u-mr3--mUp {
+	.u-mr3\@mUp {
 		@include rem(margin-right, $spacingUnit-medium, true);
 	}
-	.u-mr4--mUp {
+	.u-mr4\@mUp {
 		@include rem(margin-right, $spacingUnit-double, true);
 	}
 }

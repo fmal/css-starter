@@ -50,75 +50,75 @@
 .z9 { z-index: $zIndex-9 !important; }
 
 @include mq($from: small) {
-	.posS--sUp {
+	.posS\@sUp {
 		position: static !important;
 	}
-	.posA--sUp {
+	.posA\@sUp {
 		position: absolute !important;
 	}
-	.posR--sUp {
+	.posR\@sUp {
 		position: relative !important;
 	}
-	.posF--sUp {
+	.posF\@sUp {
 		position: fixed !important;
 		backface-visibility: hidden;
 	}
 
-	.top0--sUp { top: 0 !important; }
-	.right0--sUp { right: 0 !important; }
-	.bottom0--sUp { bottom: 0 !important; }
-	.left0--sUp { left: 0 !important; }
+	.top0\@sUp { top: 0 !important; }
+	.right0\@sUp { right: 0 !important; }
+	.bottom0\@sUp { bottom: 0 !important; }
+	.left0\@sUp { left: 0 !important; }
 
-	.topC--sUp {
+	.topC\@sUp {
 		top: 50% !important;
 		transform: translateY(-50%) !important;
 	}
 
-	.leftC--sUp {
+	.leftC\@sUp {
 		left: 50% !important;
 		transform: translateX(-50%) !important;
 	}
 
-	.z1--sUp { z-index: $zIndex-1 !important; }
-	.z2--sUp { z-index: $zIndex-2 !important; }
-	.z3--sUp { z-index: $zIndex-3 !important; }
-	.z4--sUp { z-index: $zIndex-4 !important; }
-	.z9--sUp { z-index: $zIndex-9 !important; }
+	.z1\@sUp { z-index: $zIndex-1 !important; }
+	.z2\@sUp { z-index: $zIndex-2 !important; }
+	.z3\@sUp { z-index: $zIndex-3 !important; }
+	.z4\@sUp { z-index: $zIndex-4 !important; }
+	.z9\@sUp { z-index: $zIndex-9 !important; }
 }
 
 @include mq($from: medium) {
-	.posS--mUp {
+	.posS\@mUp {
 		position: static !important;
 	}
-	.posA--mUp {
+	.posA\@mUp {
 		position: absolute !important;
 	}
-	.posR--mUp {
+	.posR\@mUp {
 		position: relative !important;
 	}
-	.posF--mUp {
+	.posF\@mUp {
 		position: fixed !important;
 		backface-visibility: hidden;
 	}
-	
-	.top0--mUp { top: 0 !important; }
-	.right0--mUp { right: 0 !important; }
-	.bottom0--mUp { bottom: 0 !important; }
-	.left0--mUp { left: 0 !important; }
-	
-	.topC--mUp {
+
+	.top0\@mUp { top: 0 !important; }
+	.right0\@mUp { right: 0 !important; }
+	.bottom0\@mUp { bottom: 0 !important; }
+	.left0\@mUp { left: 0 !important; }
+
+	.topC\@mUp {
 		top: 50% !important;
 		transform: translateY(-50%) !important;
 	}
-	
-	.leftC--mUp {
+
+	.leftC\@mUp {
 		left: 50% !important;
 		transform: translateX(-50%) !important;
 	}
-	
-	.z1--mUp { z-index: $zIndex-1 !important; }
-	.z2--mUp { z-index: $zIndex-2 !important; }
-	.z3--mUp { z-index: $zIndex-3 !important; }
-	.z4--mUp { z-index: $zIndex-4 !important; }
-	.z9--mUp { z-index: $zIndex-9 !important; }
+
+	.z1\@mUp { z-index: $zIndex-1 !important; }
+	.z2\@mUp { z-index: $zIndex-2 !important; }
+	.z3\@mUp { z-index: $zIndex-3 !important; }
+	.z4\@mUp { z-index: $zIndex-4 !important; }
+	.z9\@mUp { z-index: $zIndex-9 !important; }
 }

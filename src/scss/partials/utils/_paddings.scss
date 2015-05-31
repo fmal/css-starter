@@ -97,165 +97,165 @@
 }
 
 @include mq($from: small) {
-	.u-p0--sUp {
+	.u-p0\@sUp {
 		padding: 0 !important;
 	}
-	.u-p1--sUp {
+	.u-p1\@sUp {
 		@include rem(padding, $spacingUnit-half, true);
 	}
-	.u-p2--sUp {
+	.u-p2\@sUp {
 		@include rem(padding, $spacingUnit-base, true);
 	}
-	.u-p3--sUp {
+	.u-p3\@sUp {
 		@include rem(padding, $spacingUnit-medium, true);
 	}
-	.u-p4--sUp {
+	.u-p4\@sUp {
 		@include rem(padding, $spacingUnit-double, true);
 	}
 	
-	.u-pt0--sUp {
+	.u-pt0\@sUp {
 		padding-top: 0 !important;
 	}
-	.u-pt1--sUp {
+	.u-pt1\@sUp {
 		@include rem(padding-top, $spacingUnit-half, true);
 	}
-	.u-pt2--sUp {
+	.u-pt2\@sUp {
 		@include rem(padding-top, $spacingUnit-base, true);
 	}
-	.u-pt3--sUp {
+	.u-pt3\@sUp {
 		@include rem(padding-top, $spacingUnit-medium, true);
 	}
-	.u-pt4--sUp {
+	.u-pt4\@sUp {
 		@include rem(padding-top, $spacingUnit-double, true);
 	}
 	
-	.u-pb0--sUp {
+	.u-pb0\@sUp {
 		padding-bottom: 0 !important;
 	}
-	.u-pb1--sUp {
+	.u-pb1\@sUp {
 		@include rem(padding-bottom, $spacingUnit-half, true);
 	}
-	.u-pb2--sUp {
+	.u-pb2\@sUp {
 		@include rem(padding-bottom, $spacingUnit-base, true);
 	}
-	.u-pb3--sUp {
+	.u-pb3\@sUp {
 		@include rem(padding-bottom, $spacingUnit-medium, true);
 	}
-	.u-pb4--sUp {
+	.u-pb4\@sUp {
 		@include rem(padding-bottom, $spacingUnit-double, true);
 	}
 	
-	.u-pl0--sUp {
+	.u-pl0\@sUp {
 		padding-left: 0 !important;
 	}
-	.u-pl1--sUp {
+	.u-pl1\@sUp {
 		@include rem(padding-left, $spacingUnit-half, true);
 	}
-	.u-pl2--sUp {
+	.u-pl2\@sUp {
 		@include rem(padding-left, $spacingUnit-base, true);
 	}
-	.u-pl3--sUp {
+	.u-pl3\@sUp {
 		@include rem(padding-left, $spacingUnit-medium, true);
 	}
-	.u-pl4--sUp {
+	.u-pl4\@sUp {
 		@include rem(padding-left, $spacingUnit-double, true);
 	}
 	
-	.u-pr0--sUp {
+	.u-pr0\@sUp {
 		padding-right: 0 !important;
 	}
-	.u-pr1--sUp {
+	.u-pr1\@sUp {
 		@include rem(padding-right, $spacingUnit-half, true);
 	}
-	.u-pr2--sUp {
+	.u-pr2\@sUp {
 		@include rem(padding-right, $spacingUnit-base, true);
 	}
-	.u-pr3--sUp {
+	.u-pr3\@sUp {
 		@include rem(padding-right, $spacingUnit-medium, true);
 	}
-	.u-pr4--sUp {
+	.u-pr4\@sUp {
 		@include rem(padding-right, $spacingUnit-double, true);
 	}
 }
 
 @include mq($from: medium) {
-	.u-p0--mUp {
+	.u-p0\@mUp {
 		padding: 0 !important;
 	}
-	.u-p1--mUp {
+	.u-p1\@mUp {
 		@include rem(padding, $spacingUnit-half, true);
 	}
-	.u-p2--mUp {
+	.u-p2\@mUp {
 		@include rem(padding, $spacingUnit-base, true);
 	}
-	.u-p3--mUp {
+	.u-p3\@mUp {
 		@include rem(padding, $spacingUnit-medium, true);
 	}
-	.u-p4--mUp {
+	.u-p4\@mUp {
 		@include rem(padding, $spacingUnit-double, true);
 	}
 	
-	.u-pt0--mUp {
+	.u-pt0\@mUp {
 		padding-top: 0 !important;
 	}
-	.u-pt1--mUp {
+	.u-pt1\@mUp {
 		@include rem(padding-top, $spacingUnit-half, true);
 	}
-	.u-pt2--mUp {
+	.u-pt2\@mUp {
 		@include rem(padding-top, $spacingUnit-base, true);
 	}
-	.u-pt3--mUp {
+	.u-pt3\@mUp {
 		@include rem(padding-top, $spacingUnit-medium, true);
 	}
-	.u-pt4--mUp {
+	.u-pt4\@mUp {
 		@include rem(padding-top, $spacingUnit-double, true);
 	}
 	
-	.u-pb0--mUp {
+	.u-pb0\@mUp {
 		padding-bottom: 0 !important;
 	}
-	.u-pb1--mUp {
+	.u-pb1\@mUp {
 		@include rem(padding-bottom, $spacingUnit-half, true);
 	}
-	.u-pb2--mUp {
+	.u-pb2\@mUp {
 		@include rem(padding-bottom, $spacingUnit-base, true);
 	}
-	.u-pb3--mUp {
+	.u-pb3\@mUp {
 		@include rem(padding-bottom, $spacingUnit-medium, true);
 	}
-	.u-pb4--mUp {
+	.u-pb4\@mUp {
 		@include rem(padding-bottom, $spacingUnit-double, true);
 	}
 	
-	.u-pl0--mUp {
+	.u-pl0\@mUp {
 		padding-left: 0 !important;
 	}
-	.u-pl1--mUp {
+	.u-pl1\@mUp {
 		@include rem(padding-left, $spacingUnit-half, true);
 	}
-	.u-pl2--mUp {
+	.u-pl2\@mUp {
 		@include rem(padding-left, $spacingUnit-base, true);
 	}
-	.u-pl3--mUp {
+	.u-pl3\@mUp {
 		@include rem(padding-left, $spacingUnit-medium, true);
 	}
-	.u-pl4--mUp {
+	.u-pl4\@mUp {
 		@include rem(padding-left, $spacingUnit-double, true);
 	}
 	
-	.u-pr0--mUp {
+	.u-pr0\@mUp {
 		padding-right: 0 !important;
 	}
-	.u-pr1--mUp {
+	.u-pr1\@mUp {
 		@include rem(padding-right, $spacingUnit-half, true);
 	}
-	.u-pr2--mUp {
+	.u-pr2\@mUp {
 		@include rem(padding-right, $spacingUnit-base, true);
 	}
-	.u-pr3--mUp {
+	.u-pr3\@mUp {
 		@include rem(padding-right, $spacingUnit-medium, true);
 	}
-	.u-pr4--mUp {
+	.u-pr4\@mUp {
 		@include rem(padding-right, $spacingUnit-double, true);
 	}
 }

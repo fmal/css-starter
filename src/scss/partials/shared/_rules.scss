@@ -2,7 +2,7 @@ h1, .Hdg1,
 h2, .Hdg2,
 h3, .Hdg3 {
 	font-family: $fontFamily-headline;
-    font-weight: $fontWeight-headline;
+	font-weight: $fontWeight-headline;
 	color: $textColor-darker;
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern";
