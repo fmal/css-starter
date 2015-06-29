@@ -339,18 +339,13 @@ html {
   overflow-y: scroll;
   background-color: white;
   font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
-  font-size: 87.5%;
   line-height: 1.5;
   font-weight: 400;
   color: #3f3f3f;
-  min-width: 20em;
   font-size: 100%; }
 
 html, body {
   min-height: 100%; }
-
-body {
-  -webkit-backface-visibility: hidden; }
 
 head {
   font-family: "small"; }
@@ -431,19 +426,16 @@ img {
  * http://j.mp/sUvKuN
  */
 h1, .Hdg1 {
-  font-size: 37px;
-  font-size: 2.3125rem;
-  line-height: 1.2972973 ; }
+  font-size: 32px;
+  font-size: 2rem; }
 
 h2, .Hdg2 {
-  font-size: 28px;
-  font-size: 1.75rem;
-  line-height: 1.7142857 ; }
+  font-size: 24px;
+  font-size: 1.5rem; }
 
 h3, .Hdg3 {
-  font-size: 21px;
-  font-size: 1.3125rem;
-  line-height: 1.1428571 ;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 0; }
 
 /* Micro typographic styles
@@ -530,6 +522,7 @@ blockquote {
 h1, .Hdg1, h2, .Hdg2, h3, .Hdg3 {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
+  line-height: 1.25;
   color: #3f3f3f;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -2062,8 +2055,8 @@ table.is-shown {
     background-color: #39200c; }
 
 .Button--large {
-  font-size: 21px;
-  font-size: 1.3125rem; }
+  font-size: 20px;
+  font-size: 1.25rem; }
 
 /* Nav component
    ========================================================================== */

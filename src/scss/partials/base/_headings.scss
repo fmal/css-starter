@@ -1,12 +1,8 @@
 /* Headings
    ========================================================================== */
-$fontSize--hdg1: _ms(3); // .Hdg1
-//$lineHeight--hdg1: $lineHeight-base * 3;
-$lineHeight--hdg1: $lineHeight-base * 2; // .Hdg1
-$fontSize--hdg2: _ms(2); // .Hdg2
-$lineHeight--hdg2: $lineHeight-base * 2; // .Hdg2
-$fontSize--hdg3: _ms(1); // .Hdg3
-$lineHeight--hdg3: $lineHeight-base; // .Hdg3
+$fontSize--hdg1: $fontSize-base * 2; // .Hdg1
+$fontSize--hdg2: $fontSize-base * 1.5; // .Hdg2
+$fontSize--hdg3: $fontSize-base * 1.25; // .Hdg3
 
 /**
  * Font size setting
@@ -15,14 +11,11 @@ $lineHeight--hdg3: $lineHeight-base; // .Hdg3
  */
 h1, .Hdg1 {
 	@include fontSize($fontSize--hdg1);
-	@include lineHeight($fontSize--hdg1, $lineHeight--hdg1);
 }
 h2, .Hdg2 {
 	@include fontSize($fontSize--hdg2);
-	@include lineHeight($fontSize--hdg2, $lineHeight--hdg2);
 }
 h3, .Hdg3 {
 	@include fontSize($fontSize--hdg3);
-	@include lineHeight($fontSize--hdg3, $lineHeight--hdg3);
 	margin-bottom: 0;
 }

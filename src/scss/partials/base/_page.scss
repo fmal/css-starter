@@ -8,23 +8,21 @@ html {
 	overflow-y: scroll;
 	background-color: $white;
 	font-family: $fontFamily-body;
-	font-size: _pc($fontSize-base - 2);
-	line-height: $lineHeightRatio;
+	line-height: $lineHeightRatio-base;
 	font-weight: $fontWeight-body;
 	color: $textColor-darker;
-	min-width: _em(320);
 
-	@include mq($from: medium) {
+	@include oldIE {
 		font-size: _pc($fontSize-base);
+	}
+	
+	@include notOldIE {
+		@include fluidType(_em(320 1920 ($fontSize-base - 2) ($fontSize-base + 2)));
 	}
 }
 html,
 body {
 	min-height: 100%;
-}
-
-body {
-	-webkit-backface-visibility: hidden;
 }
 
 @include mqSyncGen($breakpointsSync);

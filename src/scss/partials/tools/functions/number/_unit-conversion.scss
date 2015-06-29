@@ -24,7 +24,7 @@
 }
 
 // Percentage alias
-@function _pc( $val, $context: $fontSize-browserDefault) {
+@function _pc($val, $context: $fontSize-browserDefault) {
 	@return unitConvert($val, $context, 100%);
 }
 
@@ -35,7 +35,7 @@
 
 // Ems alias
 @function _em($val, $context: $fontSize-base) {
-	@return unitConvert($val, $context, 1em);
+	@return unitConvert($val, $context);
 }
 
 // Set value as px

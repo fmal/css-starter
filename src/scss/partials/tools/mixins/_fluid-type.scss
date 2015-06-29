@@ -1,0 +1,23 @@
+@mixin fluidType($vals) {
+	@if type-of($vals) == "list" and length($vals) == 4 {
+
+		$minVw: nth($vals, 1);
+		$maxVw: nth($vals, 2);
+		$minFontSize: nth($vals, 3);
+		$maxFontSize: nth($vals, 4);
+	
+		& {
+			font-size: $minFontSize;
+	
+			@media (min-width: $minVw) {
+				font-size: calc(#{$minFontSize} + #{clean($maxFontSize - $minFontSize)} * ((100vw - #{$minVw}) / #{clean($maxVw - $minVw)}));
+			}
+	
+			@media (min-width: $maxVw) {
+				font-size: $maxFontSize;
+			}
+		}
+	} @else {
+		@warn "#{$vals} must be a list with four values.";
+	}
+}
