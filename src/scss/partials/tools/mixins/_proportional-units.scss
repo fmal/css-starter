@@ -7,6 +7,9 @@
 	$property: width,
 	$modifier: ''
 ) {
+	// workaround for "invalid selector after" error
+	$modifier: if($modifier == '', $modifier, '#{\@}#{$modifier}');
+
 	@each $n in $units {
 		// Avoid creating rules like `.u-size12of12 {}`
 		$x: $n - 1;

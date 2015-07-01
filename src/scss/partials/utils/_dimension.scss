@@ -32,7 +32,7 @@
 	@include proportionalUnits(
 		2 3 4 6,
 		$classSlug: 'u-size',
-		$modifier: '\@sUp'
+		$modifier: 'sUp'
 	);
 }
 
@@ -40,7 +40,7 @@
 	@include proportionalUnits(
 		2 3 4 6,
 		$classSlug: 'u-size',
-		$modifier: '\@mUp'
+		$modifier: 'mUp'
 	);
 }
 
@@ -48,6 +48,6 @@
 	@include proportionalUnits(
 		3,
 		$classSlug: 'u-size',
-		$modifier: '\@xlUp'
+		$modifier: 'xlUp'
 	);
 }
