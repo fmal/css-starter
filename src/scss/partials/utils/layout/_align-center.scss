@@ -1,0 +1,24 @@
+/**
+ * Horizontal and vertical centering (remove the whitespace in HTML!)
+ *
+ * <div class="u-alignCenter">
+ *     <div class="u-alignCenter-inner"></div>
+ * </div>
+ */
+.u-alignCenter {
+    text-align: center;
+
+    &:before {
+        display: inline-block;
+        min-height: inherit;
+        max-height: inherit;
+        width: 0;
+        height: 100%;
+        content: "";
+        vertical-align: middle;
+    }
+}
+    .u-alignCenter-inner {
+        display: inline-block;
+        vertical-align: middle;
+    }

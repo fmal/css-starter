@@ -1,0 +1,12 @@
+/**
+ * New block formatting context
+ * Element won't wrap under floats. It will also contain any floated children
+ */
+.u-bfc {
+    overflow: hidden;
+}
+
+.u-bfcAlt {
+    display: table-cell;
+    width: 10000px;
+}

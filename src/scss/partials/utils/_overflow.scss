@@ -1,0 +1,18 @@
+/* Overflow utilities
+========================================================================== */
+
+.u-ofH {
+    overflow: hidden;
+}
+
+.u-scrollableY {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.u-scrollableX {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}

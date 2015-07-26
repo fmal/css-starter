@@ -50,6 +50,21 @@
 }
 
 /**
+ * Typographical measure
+ */
+.u-measure {
+    max-width: 48rem;
+}
+
+.u-measureNarrow {
+    max-width: 32rem;
+}
+
+.u-measureWide {
+    max-width: 74rem;
+}
+
+/**
  * Inherit the ancestor's text color.
  */
 .u-txtInheritColor {
@@ -66,17 +81,8 @@
 /**
  * Font weights
  */
-.u-fwT {
-	font-weight: 100 !important;
-}
-.u-fwL {
-	font-weight: 300 !important;
-}
 .u-fwN {
 	font-weight: 400 !important;
-}
-.u-fwSB {
-	font-weight: 600 !important;
 }
 .u-fwB {
 	font-weight: 700 !important;
@@ -108,7 +114,7 @@
 .u-wbN {
 	word-break: normal !important;
 }
-.wbA {
+.u-wbA {
 	word-break: break-all !important;
 }
 
@@ -156,9 +162,9 @@
 
 /**
  *
- * 1. Old IE fix
+ * 1. IE fix
  */
-.txtAssistive {
+.u-txtAssistive {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* [1] */
 	clip: rect(1px, 1px, 1px, 1px);
@@ -186,3 +192,4 @@
 	position: absolute;
 	left: 100%;
 }
+

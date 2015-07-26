@@ -1,6 +1,6 @@
 /* Display utilities
    ========================================================================== */
-   
+
 .u-dI {
 	display: inline !important;
 }
@@ -14,42 +14,50 @@
 	max-width: 100%;
 }
 
+.u-dF {
+	display: flex !important;
+}
+
 .u-dT {
-	display: table;
+	display: table !important;
 }
 
 .u-dTR {
-	display: table-row;
+	display: table-row !important;
 }
 
 .u-dTC {
-	display: table-cell;
+	display: table-cell !important;
 }
 
 @include mq($from: small) {
 	.u-dI\@sUp {
 		display: inline !important;
 	}
-	
+
 	.u-dB\@sUp {
 		display: block !important;
 	}
-	
+
 	.u-dIB\@sUp {
 		display: inline-block !important;
 		max-width: 100%;
 	}
-	
+
+	.u-dF\@sUp {
+		display: flex !important;
+	}
+
 	.u-dT\@sUp {
-		display: table;
+		display: table !important;
 	}
-	
+
 	.u-dTR\@sUp {
-		display: table-row;
+		display: table-row !important;
 	}
-	
+
 	.u-dTC\@sUp {
-		display: table-cell;
+		display: table-cell !important;
 	}
 }
 
@@ -67,15 +75,19 @@
 		max-width: 100%;
 	}
 
+	.u-dF\@mUp {
+		display: flex !important;
+	}
+
 	.u-dT\@mUp {
-		display: table;
+		display: table !important;
 	}
 
 	.u-dTR\@mUp {
-		display: table-row;
+		display: table-row !important;
 	}
 
 	.u-dTC\@mUp {
-		display: table-cell;
+		display: table-cell !important;
 	}
 }

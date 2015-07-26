@@ -1,0 +1,71 @@
+/**
+ * Add/remove floats
+ */
+.u-fR {
+    float: right !important;
+}
+.u-fL {
+    float: left !important;
+}
+.u-fN {
+    float: none !important;
+}
+
+@include mq($from: small) {
+    .u-fR\@sUp {
+        float: right !important;
+    }
+    .u-fL\@sUp {
+        float: left !important;
+    }
+    .u-fN\@sUp {
+        float: none !important;
+    }
+}
+
+@include mq($from: medium) {
+    .u-fR\@mUp {
+        float: right !important;
+    }
+    .u-fL\@mUp {
+        float: left !important;
+    }
+    .u-fN\@mUp {
+        float: none !important;
+    }
+}
+
+@include mq($from: large) {
+    .u-fR\@lUp {
+        float: right !important;
+    }
+    .u-fL\@lUp {
+        float: left !important;
+    }
+    .u-fN\@lUp {
+        float: none !important;
+    }
+}
+
+/**
+ * Clear floats
+ */
+.u-clear {
+    clear: both;
+}
+
+/**
+ * Clearfix
+ * http://nicolasgallagher.com/micro-clearfix-hack/
+ */
+.u-cf {
+    &:before,
+    &:after {
+        display: table;
+        content: " ";
+    }
+
+    &:after {
+        clear: both;
+    }
+}
