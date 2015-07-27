@@ -1,0 +1,37 @@
+/* Arrange
+   ========================================================================== */
+
+.Arrange {
+    display: table;
+    min-width: 100%;
+    table-layout: auto;
+    box-sizing: border-box;
+}
+
+    .Arrange-sizeFill,
+    .Arrange-sizeFit {
+        display: table-cell !important;
+        vertical-align: top;
+    }
+
+    /**
+     * 1. Make images fluid to protect against breaking the layout
+     */
+    .Arrange-sizeFill {
+        width: 100%;
+
+        > img {
+            max-width: 100%; /* [1] */
+            height: auto; /* [1] */
+        }
+    }
+
+.Arrange--middle .Arrange-sizeFill,
+.Arrange--middle .Arrange-sizeFit {
+    vertical-align: middle;
+}
+
+.Arrange--bottom .Arrange-sizeFill,
+.Arrange--bottom .Arrange-sizeFit {
+    vertical-align: bottom;
+}

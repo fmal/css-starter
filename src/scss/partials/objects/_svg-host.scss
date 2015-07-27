@@ -1,0 +1,51 @@
+/* SVG host
+   ========================================================================== */
+
+/**
+ * 1. SVG should inherit the color of the text
+ * 2. In case of using SVG as background images with the background-image
+ *    property
+ * 3. Workaround for scaling bug in Android browser
+ * 4. Avoid pointer events in the SVG when listening to events
+ */
+.svgHost {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    fill: currentColor; /* [1] */
+    background-size: 100%; /* [2] */
+    background-position: 50%; /* [2] */
+    width: 1em;
+    height: 1em;
+
+    > svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-height: 100%; /* [3] */
+        pointer-events: none; /* [4] */
+        background-color: transparent;
+    }
+}
+
+/**
+ * Size modifiers
+ */
+.svgHost--small {
+    width: _rem($fontSize-base) !important;
+    height: _rem($fontSize-base) !important;
+    font-size: _rem($fontSize-base) !important;
+}
+
+.svgHost--medium {
+    width: _rem($fontSize-base * 1.5) !important;
+    height: _rem($fontSize-base * 1.5) !important;
+    font-size: _rem($fontSize-base * 1.5) !important;
+}
+
+.svgHost--large {
+    width: _rem($fontSize-base * 2) !important;
+    height: _rem($fontSize-base * 2) !important;
+    font-size: _rem($fontSize-base * 2) !important;
+}
