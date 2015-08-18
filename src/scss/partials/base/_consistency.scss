@@ -1,0 +1,33 @@
+/* A thin layer on top of normalize.css
+   ========================================================================== */
+h1, h2, h3, h4,
+p, blockquote, pre,
+dl, dd, ol, ul,
+figure,
+fieldset {
+	margin: 0;
+	padding: 0;
+}
+
+iframe,
+fieldset {
+	border: 0;
+}
+
+button {
+	background: transparent;
+	border: 0;
+	padding: 0;
+
+	&:focus {
+		outline: 1px dotted;
+		outline: 5px auto -webkit-focus-ring-color;
+	}
+}
+
+/**
+ * Suppress the focus outline on links that cannot be accessed via keyboard
+ */
+[tabindex="-1"]:focus {
+	outline: none !important;
+}
